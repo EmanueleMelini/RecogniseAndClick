@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/main_top_bar"
+            layout="@layout/top_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_testo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/text_search"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@id/text_to_search"
+            app:layout_constraintTop_toBottomOf="@+id/main_top_bar" />
+
+        <EditText
+            android:id="@+id/text_to_search"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/insert_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_testo" />
+
+        <TextView
+            android:id="@+id/text_testo_scelto"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/text_to_search"
+            app:layout_constraintTop_toBottomOf="@+id/text_to_search" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:onClick="startProjection"
+            android:text="@string/start"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/text_to_search"
+            app:layout_constraintTop_toBottomOf="@+id/text_to_search" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:onClick="stopProjection"
+            android:text="@string/stop"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_to_search"
+            app:layout_constraintTop_toBottomOf="@+id/text_to_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

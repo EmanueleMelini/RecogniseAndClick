@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RecogniseAndClick</string>
+
+    <string name="accessibility_service_name">RecogniseAndCLick</string>
+    <string name="accessibility_service_id">it.emanuelemelini.recogniseandclick/.services.AutoClickService</string>
+    <string name="accessibility_service_description">This app can recognise text on the screen and tap on it</string>
+    <string name="text_search">Testo da cercare</string>
+    <string name="insert_text">Inserisci il testo da cercare</string>
+    <string name="start">Inizia</string>
+    <string name="stop">Termina</string>
+</resources>
